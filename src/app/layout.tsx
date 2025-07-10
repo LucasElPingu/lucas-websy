@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Lucas Websy - Sites Profissionais e Modernos",
     description:
       "Sites rápidos, modernos e personalizados para sua empresa ou projeto.",
-    url: "https://lucaswebsy.com",
+    url: "https://lucaswebsy.com.br",
     siteName: "Lucas Websy",
     type: "website",
     locale: "pt_BR",
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
       images: ["/images/share.png"],
   },
   other: {
-    "og:image": "https://lucaswebsy.com/images/share.png",
+    "og:image": "https://lucaswebsy.com.br/images/share.png",
     "og:image:width": "1200",
     "og:image:height": "630",
     "og:image:alt": "Lucas Websy - Sites Profissionais",
     "og:type": "website",
     "og:site_name": "Lucas Websy",
     "og:locale": "pt_BR",
-    "og:url": "https://lucaswebsy.com",
+    "og:url": "https://lucaswebsy.com.br",
     "og:title": "Lucas Websy - Sites Profissionais e Modernos",
     "og:description":
       "Sites rápidos, modernos e personalizados para sua empresa ou projeto.",
@@ -75,7 +75,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Lucas Websy",
               description: "Criação de sites profissionais e modernos",
-              url: "https://lucaswebsy.com",
+              url: "https://lucaswebsy.com.br",
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+55-83-9-9332-4678",
