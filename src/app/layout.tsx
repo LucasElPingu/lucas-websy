@@ -22,11 +22,33 @@ export const metadata: Metadata = {
     siteName: "Lucas Websy",
     type: "website",
     locale: "pt_BR",
+    images: [
+      {
+        url: "/images/share.png",
+        width: 1200,
+        height: 630,
+        alt: "Lucas Websy - Sites Profissionais",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Lucas Websy - Sites Profissionais e Modernos",
     description:
+      "Sites rápidos, modernos e personalizados para sua empresa ou projeto.",
+      images: ["/images/share.png"],
+  },
+  other: {
+    "og:image": "https://lucaswebsy.com/images/share.png",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:image:alt": "Lucas Websy - Sites Profissionais",
+    "og:type": "website",
+    "og:site_name": "Lucas Websy",
+    "og:locale": "pt_BR",
+    "og:url": "https://lucaswebsy.com",
+    "og:title": "Lucas Websy - Sites Profissionais e Modernos",
+    "og:description":
       "Sites rápidos, modernos e personalizados para sua empresa ou projeto.",
   },
   robots: {
