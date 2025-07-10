@@ -1,4 +1,5 @@
 import styles from "./About.module.css";
+import Image from "next/image";
 
 export default function About() {
   const whatsappLink =
@@ -15,21 +16,22 @@ export default function About() {
             </div>
 
             <h2 className={styles.title}>
-              Desenvolvedor web focado em resultados
+              Desenvolvedor web com foco em presença digital de impacto
             </h2>
 
             <div className={styles.description}>
               <p>
-                Me chamo <strong>Lucas</strong>, sou desenvolvedor web e criei a{" "}
-                <strong>Lucas Websy</strong> com o objetivo de ajudar pessoas e
-                empresas a colocarem sua presença online com qualidade, rapidez
-                e design de impacto.
+                Olá! Me chamo <strong>Lucas</strong>, sou desenvolvedor web e
+                fundador da <strong>Lucas Websy</strong>, uma iniciativa criada
+                para ajudar pessoas e empresas a se destacarem no mundo digital
+                com sites rápidos, modernos e personalizados.
               </p>
 
               <p>
-                Minha missão é transformar ideias em sites funcionais e
-                atrativos, sempre priorizando a experiência do usuário e os
-                resultados do negócio.
+                Acredito que todo projeto — grande ou pequeno — merece um site
+                profissional que represente sua identidade e gere resultados
+                reais. Meu objetivo é transformar ideias em experiências online
+                que combinam design atrativo, desempenho e usabilidade.
               </p>
             </div>
 
@@ -86,9 +88,11 @@ export default function About() {
           <div className={styles.imageContent}>
             <div className={styles.imageWrapper}>
               <div className={styles.imageContainer}>
-                <img
-                  src="/images/imagem1.jpg"
+                <Image
+                  src="/images/imagem1.png"
                   alt="Lucas Silva - Desenvolvedor Web"
+                  width={300}
+                  height={300}
                   className={styles.profileImage}
                 />
                 <div className={styles.imageOverlay}></div>

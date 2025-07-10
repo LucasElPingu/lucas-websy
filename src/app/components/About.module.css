@@ -194,10 +194,11 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  scale: 1.1;
 }
 
 .imageContainer:hover .profileImage {
-  transform: scale(1.05);
+  transform: scale(1.4);
 }
 
 .imageOverlay {

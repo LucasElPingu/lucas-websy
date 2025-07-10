@@ -152,6 +152,18 @@
   background-color: rgba(104, 211, 145, 0.1);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .nav {

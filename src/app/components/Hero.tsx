@@ -11,7 +11,7 @@ export default function Hero() {
           {/* Lado esquerdo - Conteúdo principal */}
           <div className={styles.textContent}>
             <h1 className={styles.headline}>
-              Profissionalize sua marca.
+              Profissionalize sua marca
               <span className={styles.highlight}> Online.</span>
             </h1>
 
@@ -53,13 +53,13 @@ export default function Hero() {
                 <div className={styles.codeLine}>
                   <span className={styles.property}> design</span>
                   <span className={styles.operator}>: </span>
-                  <span className={styles.string}>"moderno"</span>
+                  <span className={styles.string}>moderno</span>
                   <span className={styles.operator}>,</span>
                 </div>
                 <div className={styles.codeLine}>
                   <span className={styles.property}> performance</span>
                   <span className={styles.operator}>: </span>
-                  <span className={styles.string}>"rápido"</span>
+                  <span className={styles.string}>rápido</span>
                   <span className={styles.operator}>,</span>
                 </div>
                 <div className={styles.codeLine}>
@@ -71,7 +71,7 @@ export default function Hero() {
                 <div className={styles.codeLine}>
                   <span className={styles.property}> seo</span>
                   <span className={styles.operator}>: </span>
-                  <span className={styles.string}>"otimizado"</span>
+                  <span className={styles.string}>otimizado</span>
                 </div>
                 <div className={styles.codeLine}>
                   <span className={styles.string}>{"}"}</span>

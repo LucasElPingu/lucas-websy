@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +31,13 @@ export default function Header() {
       <div className={styles.container}>
         {/* Logo */}
         <div className={styles.logo}>
+          <Image
+            src="/images/favicon.ico"
+            alt="Ícone da Lucas Websy"
+            width={37}
+            height={37}
+            className={styles.logoIcon}
+          />
           <h1>Lucas Websy</h1>
         </div>
 
@@ -74,19 +82,27 @@ export default function Header() {
           aria-label="Toggle menu"
         >
           <span
-            className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ""}`}
+            className={`${styles.hamburgerLine} ${
+              isMenuOpen ? styles.open : ""
+            }`}
           ></span>
           <span
-            className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ""}`}
+            className={`${styles.hamburgerLine} ${
+              isMenuOpen ? styles.open : ""
+            }`}
           ></span>
           <span
-            className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ""}`}
+            className={`${styles.hamburgerLine} ${
+              isMenuOpen ? styles.open : ""
+            }`}
           ></span>
         </button>
 
         {/* Menu Mobile */}
         <div
-          className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ""}`}
+          className={`${styles.mobileMenu} ${
+            isMenuOpen ? styles.mobileMenuOpen : ""
+          }`}
         >
           <button
             onClick={() => scrollToSection("home")}

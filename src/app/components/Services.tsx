@@ -13,17 +13,12 @@ export default function Services() {
     {
       icon: "🛒",
       title: "Lojas virtuais (e-commerce)",
-      description: "Com carrinho, pagamentos e frete integrados",
+      description: "Criação de e-commerces modernos, rápidos e seguros.",
     },
     {
       icon: "📱",
       title: "Landing pages",
       description: "Páginas únicas para produtos, eventos ou serviços",
-    },
-    {
-      icon: "🔗",
-      title: "Integração com WhatsApp e redes sociais",
-      description: "Contato rápido com clientes",
     },
     {
       icon: "🎨",

@@ -24,7 +24,7 @@ export default function Benefits() {
     },
     {
       icon: "📞",
-      title: "Suporte pós-entrega",
+      title: "Suporte pós-entrega (opcional)",
       description: "Acompanhamento e suporte técnico quando necessário",
     },
     {
@@ -84,10 +84,6 @@ export default function Benefits() {
             <div className={styles.statCard}>
               <div className={styles.statNumber}>⚡</div>
               <div className={styles.statLabel}>Performance</div>
-            </div>
-            <div className={styles.statCard}>
-              <div className={styles.statNumber}>24/7</div>
-              <div className={styles.statLabel}>Suporte</div>
             </div>
             <div className={styles.statCard}>
               <div className={styles.statNumber}>🎯</div>
