@@ -1,1 +1,174 @@
-@import "tailwindcss";
+/* Reset e configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cores da paleta escura */
+:root {
+  --primary-blue: #1a365d;
+  --secondary-blue: #2c5282;
+  --dark-purple: #2d3748;
+  --accent-lime: #68d391;
+  --text-light: #e2e8f0;
+  --text-muted: #a0aec0;
+  --background-dark: #0f1419;
+  --card-background: #1a202c;
+  --border-color: #2d3748;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    var(--font-inter),
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Tipografia */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+}
+
+/* Links */
+a {
+  color: var(--accent-lime);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-light);
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--accent-lime);
+  color: var(--background-dark);
+}
+
+.btn-primary:hover {
+  background-color: #4fd175;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent-lime);
+  border: 2px solid var(--accent-lime);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-lime);
+  color: var(--background-dark);
+}
+
+/* Container responsivo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Seções */
+.section {
+  padding: 80px 0;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+/* Grid responsivo */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .grid {
+    gap: 1rem;
+  }
+}

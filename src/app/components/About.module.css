@@ -1,0 +1,345 @@
+.about {
+  padding: 100px 0;
+  background-color: var(--background-dark);
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(44, 82, 130, 0.1) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Conteúdo textual */
+.textContent {
+  order: 1;
+}
+
+.sectionLabel {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-lime), #4fd175);
+  color: var(--background-dark);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.description {
+  margin-bottom: 2.5rem;
+}
+
+.description p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.description strong {
+  color: var(--accent-lime);
+  font-weight: 600;
+}
+
+/* Informações de contato */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.contactItem:hover {
+  border-color: var(--accent-lime);
+  transform: translateX(8px);
+}
+
+.contactIcon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent-lime), #4fd175);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-dark);
+  flex-shrink: 0;
+}
+
+.contactIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactLabel {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contactValue {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+/* Botão CTA */
+.ctaContainer {
+  display: flex;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, var(--accent-lime), #4fd175);
+  color: var(--background-dark);
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(104, 211, 145, 0.3);
+}
+
+.whatsappIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Conteúdo da imagem */
+.imageContent {
+  order: 2;
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid var(--accent-lime);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover .profileImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(104, 211, 145, 0.1), transparent);
+  pointer-events: none;
+}
+
+/* Elementos decorativos */
+.decorativeElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.floatingBadge {
+  position: absolute;
+  background-color: rgba(26, 32, 44, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: float 6s ease-in-out infinite;
+}
+
+.floatingBadge span {
+  font-size: 1.25rem;
+}
+
+.floatingBadge p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.floatingBadge:nth-child(1) {
+  top: 10%;
+  right: -10px;
+  animation-delay: 0s;
+}
+
+.floatingBadge:nth-child(2) {
+  bottom: 20%;
+  left: -10px;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .aboutContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .textContent {
+    order: 2;
+  }
+
+  .imageContent {
+    order: 1;
+  }
+
+  .imageContainer {
+    width: 280px;
+    height: 280px;
+  }
+
+  .contactInfo {
+    max-width: 400px;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .floatingBadge {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .aboutContent {
+    gap: 2rem;
+  }
+
+  .imageContainer {
+    width: 240px;
+    height: 240px;
+  }
+
+  .contactItem {
+    padding: 0.75rem;
+  }
+
+  .contactIcon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contactIcon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .ctaButton {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,240 @@
+.services {
+  padding: 100px 0;
+  background-color: var(--background-dark);
+  position: relative;
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(44, 82, 130, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Cabeçalho da seção */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid de serviços */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Card de serviço */
+.serviceCard {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-lime), var(--secondary-blue));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-lime);
+}
+
+.serviceCard:hover::before {
+  transform: scaleX(1);
+}
+
+/* Ícone do serviço */
+.serviceIcon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-lime), #4fd175);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.serviceIcon span {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.serviceCard:hover .serviceIcon {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* Conteúdo do serviço */
+.serviceContent {
+  flex: 1;
+}
+
+.serviceTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.serviceDescription {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Seção CTA */
+.ctaSection {
+  text-align: center;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(104, 211, 145, 0.05),
+    rgba(44, 82, 130, 0.05)
+  );
+  pointer-events: none;
+}
+
+.ctaText {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, var(--accent-lime), #4fd175);
+  color: var(--background-dark);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(104, 211, 145, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .services {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .serviceCard {
+    padding: 1.5rem;
+  }
+
+  .ctaSection {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .serviceCard {
+    padding: 1.25rem;
+  }
+
+  .serviceIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .serviceIcon span {
+    font-size: 1.5rem;
+  }
+
+  .ctaSection {
+    padding: 1.5rem 1rem;
+  }
+
+  .ctaButton {
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+}
