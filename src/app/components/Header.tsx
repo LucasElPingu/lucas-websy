@@ -32,7 +32,7 @@ export default function Header() {
         {/* Logo */}
         <div className={styles.logo}>
           <Image
-            src="/images/favicon.ico"
+            src="/images/icon.png"
             alt="Ícone da Lucas Websy"
             width={37}
             height={37}
