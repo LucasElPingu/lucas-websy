@@ -1,0 +1,25 @@
+{
+  "name": "Lucas Websy - Desenvolvimento Web Profissional",
+  "short_name": "Lucas Websy",
+  "description": "Sites profissionais, modernos e otimizados que geram resultados",
+  "icons": [
+    {
+      "src": "/images/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#1F1D1D",
+  "background_color": "#1F1D1D",
+  "orientation": "portrait-primary",
+  "categories": ["business", "technology", "productivity"],
+  "lang": "pt-BR"
+}

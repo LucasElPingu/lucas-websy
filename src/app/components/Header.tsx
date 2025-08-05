@@ -4,11 +4,15 @@ import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
 
+/**
+ * Componente Header - Navegação principal do site
+ * Header fixo no topo com navegação responsiva e menu mobile
+ */
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detectar scroll para aplicar efeito no header
+  // Detecta o scroll para aplicar efeitos visuais no header
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -18,122 +22,126 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Função para scroll suave até seções específicas
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
+      setIsMenuOpen(false); // Fecha o menu mobile após navegação
     }
   };
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-        {/* Logo */}
+        {/* Logo principal da marca */}
         <div className={styles.logo}>
-          <Image
-            src="/images/icon.png"
-            alt="Ícone da Lucas Websy"
-            width={37}
-            height={37}
-            className={styles.logoIcon}
-          />
-          <h1>Lucas Websy</h1>
+          <button
+            onClick={() => scrollToSection("home")}
+            className={styles.logoButton}
+          >
+                        <Image
+              src="/images/icon.png"
+              width={41}
+              height={41}
+              alt="Logo do site"
+            />
+            <span className={styles.logoText}>Lucas</span>
+            <span className={styles.logoAccent}>Websy</span>
+          </button>
         </div>
 
-        {/* Navegação Desktop */}
+        {/* Navegação para desktop */}
         <nav className={styles.nav}>
           <button
             onClick={() => scrollToSection("home")}
             className={styles.navLink}
           >
-            Home
+            <span className={styles.navText}>Home</span>
           </button>
           <button
             onClick={() => scrollToSection("services")}
             className={styles.navLink}
           >
-            Serviços
+            <span className={styles.navText}>Serviços</span>
           </button>
           <button
             onClick={() => scrollToSection("benefits")}
             className={styles.navLink}
           >
-            Benefícios
+            <span className={styles.navText}>Benefícios</span>
           </button>
           <button
             onClick={() => scrollToSection("about")}
             className={styles.navLink}
           >
-            Sobre mim
+            <span className={styles.navText}>Sobre</span>
           </button>
           <button
             onClick={() => scrollToSection("contact")}
             className={styles.navLink}
           >
-            Contato
+            <span className={styles.navText}>Contato</span>
           </button>
         </nav>
 
-        {/* Menu Mobile - Hamburger */}
+        {/* Botão toggle para menu mobile */}
         <button
-          className={styles.mobileMenuToggle}
+          className={`${styles.mobileToggle} ${
+            isMenuOpen ? styles.mobileToggleOpen : ""
+          }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Toggle navigation"
         >
-          <span
-            className={`${styles.hamburgerLine} ${
-              isMenuOpen ? styles.open : ""
-            }`}
-          ></span>
-          <span
-            className={`${styles.hamburgerLine} ${
-              isMenuOpen ? styles.open : ""
-            }`}
-          ></span>
-          <span
-            className={`${styles.hamburgerLine} ${
-              isMenuOpen ? styles.open : ""
-            }`}
-          ></span>
+          <span className={styles.toggleLine}></span>
+          <span className={styles.toggleLine}></span>
         </button>
 
-        {/* Menu Mobile */}
+        {/* Menu mobile com overlay completo */}
         <div
           className={`${styles.mobileMenu} ${
             isMenuOpen ? styles.mobileMenuOpen : ""
           }`}
         >
-          <button
-            onClick={() => scrollToSection("home")}
-            className={styles.mobileNavLink}
-          >
-            Home
-          </button>
-          <button
-            onClick={() => scrollToSection("services")}
-            className={styles.mobileNavLink}
-          >
-            Serviços
-          </button>
-          <button
-            onClick={() => scrollToSection("benefits")}
-            className={styles.mobileNavLink}
-          >
-            Benefícios
-          </button>
-          <button
-            onClick={() => scrollToSection("about")}
-            className={styles.mobileNavLink}
-          >
-            Sobre mim
-          </button>
-          <button
-            onClick={() => scrollToSection("contact")}
-            className={styles.mobileNavLink}
-          >
-            Contato
-          </button>
+          <div className={styles.mobileMenuContent}>
+            <nav className={styles.mobileNav}>
+              <button
+                onClick={() => scrollToSection("home")}
+                className={styles.mobileNavLink}
+              >
+                <span className={styles.mobileNavText}>Home</span>
+                <div className={styles.mobileNavLine}></div>
+              </button>
+              <button
+                onClick={() => scrollToSection("services")}
+                className={styles.mobileNavLink}
+              >
+                <span className={styles.mobileNavText}>Serviços</span>
+                <div className={styles.mobileNavLine}></div>
+              </button>
+              <button
+                onClick={() => scrollToSection("benefits")}
+                className={styles.mobileNavLink}
+              >
+                <span className={styles.mobileNavText}>Benefícios</span>
+                <div className={styles.mobileNavLine}></div>
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
+                className={styles.mobileNavLink}
+              >
+                <span className={styles.mobileNavText}>Sobre</span>
+                <div className={styles.mobileNavLine}></div>
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className={styles.mobileNavLink}
+              >
+                <span className={styles.mobileNavText}>Contato</span>
+                <div className={styles.mobileNavLine}></div>
+              </button>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
