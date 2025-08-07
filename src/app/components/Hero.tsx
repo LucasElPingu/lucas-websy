@@ -178,7 +178,7 @@ export default function Hero() {
               <div className={styles.statDivider}></div>
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>Alta</span>
-                <span className={styles.statLabel}>Perfomace</span>
+                <span className={styles.statLabel}>Performance</span>
               </div>
               <div className={styles.statDivider}></div>
               <div className={styles.statItem}>
