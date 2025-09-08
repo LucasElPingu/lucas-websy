@@ -17,6 +17,7 @@ export default function About() {
   const whatsappLink = "https://wa.me/5583993324678?text=Olá,%20quero%20fazer%20um%20site%20com%20você";
 
   useEffect(() => {
+    const node = sectionRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -26,13 +27,13 @@ export default function About() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, []);

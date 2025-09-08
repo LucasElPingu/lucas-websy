@@ -20,6 +20,7 @@ export default function Hero() {
       setScrollY(window.scrollY);
     };
 
+    const node = heroRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -29,16 +30,16 @@ export default function Hero() {
       { threshold: 0.1 }
     );
 
-    if (heroRef.current) {
-      observer.observe(heroRef.current);
+    if (node) {
+      observer.observe(node);
     }
 
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (heroRef.current) {
-        observer.unobserve(heroRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, []);

@@ -6,6 +6,7 @@ import Benefits from './components/Benefits';
 import About from './components/About';
 import Footer from './components/Footer';
 import ScrollReveal from './components/ScrollReveal';
+import PostsPreview from './components/PostsPreview';
 
 /**
  * Metadados específicos para a página inicial
@@ -42,7 +43,10 @@ export default function Home() {
       
       {/* Seção Sobre mim com microinterações */}
       <About />
-      
+
+      {/* Preview de posts na home */}
+      <PostsPreview />
+
       {/* Footer com estilo consistente */}
       <Footer />
     </>

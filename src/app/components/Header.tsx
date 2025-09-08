@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 /**
  * Componente Header - Navegação principal do site
@@ -77,6 +78,9 @@ export default function Header() {
           >
             <span className={styles.navText}>Sobre</span>
           </button>
+          <Link href="/#posts" className={styles.navLink}>
+            <span className={styles.navText}>Posts</span>
+          </Link>
           <button
             onClick={() => scrollToSection("contact")}
             className={styles.navLink}
@@ -133,6 +137,10 @@ export default function Header() {
                 <span className={styles.mobileNavText}>Sobre</span>
                 <div className={styles.mobileNavLine}></div>
               </button>
+              <Link href="/#posts" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
+                <span className={styles.mobileNavText}>Posts</span>
+                <div className={styles.mobileNavLine}></div>
+              </Link>
               <button
                 onClick={() => scrollToSection("contact")}
                 className={styles.mobileNavLink}
