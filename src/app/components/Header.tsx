@@ -1,9 +1,11 @@
 "use client";
 
+"use client";
+
 import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
-import Link from "next/link";
+import { usePathname, useRouter } from 'next/navigation';
 
 /**
  * Componente Header - Navegação principal do site
@@ -23,13 +25,22 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Função para scroll suave até seções específicas
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false); // Fecha o menu mobile após navegação
+  const pathname = usePathname();
+  const router = useRouter();
+
+  // Navega para seção; se já estiver na home faz scroll suave, caso contrário navega para /#section
+  const navigateToSection = (sectionId: string) => {
+    if (pathname === "/") {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setIsMenuOpen(false);
+        return;
+      }
     }
+
+    router.push(`/#${sectionId}`);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -37,11 +48,16 @@ export default function Header() {
       <div className={styles.container}>
         {/* Logo principal da marca */}
         <div className={styles.logo}>
-          <button
-            onClick={() => scrollToSection("home")}
+          <a
+            href="/"
             className={styles.logoButton}
+            onClick={(e) => {
+              e.preventDefault();
+              router.push('/');
+              setIsMenuOpen(false);
+            }}
           >
-                        <Image
+            <Image
               src="/images/icon.png"
               width={41}
               height={41}
@@ -49,40 +65,43 @@ export default function Header() {
             />
             <span className={styles.logoText}>Lucas</span>
             <span className={styles.logoAccent}>Websy</span>
-          </button>
+          </a>
         </div>
 
         {/* Navegação para desktop */}
         <nav className={styles.nav}>
           <button
-            onClick={() => scrollToSection("home")}
+            onClick={() => navigateToSection("home")}
             className={styles.navLink}
           >
             <span className={styles.navText}>Home</span>
           </button>
           <button
-            onClick={() => scrollToSection("services")}
+            onClick={() => navigateToSection("services")}
             className={styles.navLink}
           >
             <span className={styles.navText}>Serviços</span>
           </button>
           <button
-            onClick={() => scrollToSection("benefits")}
+            onClick={() => navigateToSection("benefits")}
             className={styles.navLink}
           >
             <span className={styles.navText}>Benefícios</span>
           </button>
           <button
-            onClick={() => scrollToSection("about")}
+            onClick={() => navigateToSection("about")}
             className={styles.navLink}
           >
             <span className={styles.navText}>Sobre</span>
           </button>
-          <Link href="/#posts" className={styles.navLink}>
-            <span className={styles.navText}>Posts</span>
-          </Link>
           <button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => navigateToSection("posts")}
+            className={styles.navLink}
+          >
+            <span className={styles.navText}>Posts</span>
+          </button>
+          <button
+            onClick={() => navigateToSection("contact")}
             className={styles.navLink}
           >
             <span className={styles.navText}>Contato</span>
@@ -110,39 +129,42 @@ export default function Header() {
           <div className={styles.mobileMenuContent}>
             <nav className={styles.mobileNav}>
               <button
-                onClick={() => scrollToSection("home")}
+                onClick={() => { navigateToSection("home"); setIsMenuOpen(false); }}
                 className={styles.mobileNavLink}
               >
                 <span className={styles.mobileNavText}>Home</span>
                 <div className={styles.mobileNavLine}></div>
               </button>
               <button
-                onClick={() => scrollToSection("services")}
+                onClick={() => { navigateToSection("services"); setIsMenuOpen(false); }}
                 className={styles.mobileNavLink}
               >
                 <span className={styles.mobileNavText}>Serviços</span>
                 <div className={styles.mobileNavLine}></div>
               </button>
               <button
-                onClick={() => scrollToSection("benefits")}
+                onClick={() => { navigateToSection("benefits"); setIsMenuOpen(false); }}
                 className={styles.mobileNavLink}
               >
                 <span className={styles.mobileNavText}>Benefícios</span>
                 <div className={styles.mobileNavLine}></div>
               </button>
               <button
-                onClick={() => scrollToSection("about")}
+                onClick={() => { navigateToSection("about"); setIsMenuOpen(false); }}
                 className={styles.mobileNavLink}
               >
                 <span className={styles.mobileNavText}>Sobre</span>
                 <div className={styles.mobileNavLine}></div>
               </button>
-              <Link href="/#posts" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
+              <button
+                onClick={() => { navigateToSection("posts"); setIsMenuOpen(false); }}
+                className={styles.mobileNavLink}
+              >
                 <span className={styles.mobileNavText}>Posts</span>
                 <div className={styles.mobileNavLine}></div>
-              </Link>
+              </button>
               <button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => { navigateToSection("contact"); setIsMenuOpen(false); }}
                 className={styles.mobileNavLink}
               >
                 <span className={styles.mobileNavText}>Contato</span>

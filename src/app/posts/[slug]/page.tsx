@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import styles from "../post-detail.module.css";
-import { getPostBySlug, getAllPosts } from "../data";
 import { notFound } from "next/navigation";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import { getAllPosts, getPostBySlug } from "../data";
+import styles from "../post-detail.module.css";
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -103,8 +103,7 @@ export default async function PostDetail({ params }: { params: Promise<{ slug: s
         </div>
       </section>
 
-      <div className="section-divider" />
-      <Footer />
+      <Footer showContact={false}/>
     </>
   );
 }

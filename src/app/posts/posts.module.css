@@ -140,6 +140,165 @@
   margin-top: 1rem;
 }
 
+/* Preview-specific section to differ from full posts page */
+.previewSection {
+  padding: 6rem 0;
+  /* Gradient pattern aligned with other sections */
+  background: linear-gradient(135deg, #1e2220 0%, #122c26 50%, #1c3b49 100%);
+}
+
+/* Grid for preview cards (smaller, centered, square images) */
+.previewPostsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  justify-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.previewPostsGrid .postCard {
+  max-width: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px; /* ensures consistent card height */
+}
+
+/* Make the card body fill remaining space so cards have uniform height */
+.postCard .cardBody {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 900px) {
+  .previewPostsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+.previewCoverWrap {
+  position: relative;
+  width: 100%;
+  height: 220px; /* fixed height to make cards uniform */
+  aspect-ratio: unset;
+  background: var(--bg-accent);
+  overflow: hidden;
+}
+
+/* CSS */
+.seeAllButton {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #143f32 0, #23a72a 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.seeAllButton:focus {
+  box-shadow: #0b5530 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #05301f 0 -3px 0 inset;
+}
+
+.seeAllButton:hover {
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #06301e 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.seeAllButton:active {
+  box-shadow: #126450 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* ensure full posts grid cards also have consistent height */
+.postsGrid .postCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+.coverWrap {
+  height: 220px;
+  aspect-ratio: unset;
+}
+
+/* Section header layout matching other sections */
+.sectionHeader {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.headerContent {
+  padding-top: 0.5rem;
+}
+
+.labelContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.labelLine {
+  width: 60px;
+  height: 1px;
+  background: var(--accent-color);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.titleLine {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: none;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  max-width: 70ch;
+  margin: 0;
+}
+
 /* Preview section styles used on home (legacy) */
 .previewHeader {
   text-align: center;

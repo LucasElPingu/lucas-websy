@@ -29,15 +29,14 @@
 
 .coverFrame {
   position: relative;
-  width: 100%;
-  max-width: 900px;
+  width: 1024px;
   margin: 0 auto 1.5rem;
   aspect-ratio: 4/3;
   background: var(--bg-accent);
   border: 2px solid #404040;
   border-radius: 12px;
   overflow: hidden;
-  max-height: 360px;
+  max-height: 512px;
 }
 
 .coverMedia {
@@ -69,7 +68,7 @@
   overflow: hidden;
   margin: 1rem 0;
   border: 1px solid var(--border-light);
-  max-height: 300px;
+  max-height: 100%;
 }
 
 .contentMedia {

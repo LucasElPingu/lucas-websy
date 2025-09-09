@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
+import About from './components/About';
+import Benefits from './components/Benefits';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Services from './components/Services';
-import Benefits from './components/Benefits';
-import About from './components/About';
-import Footer from './components/Footer';
-import ScrollReveal from './components/ScrollReveal';
 import PostsPreview from './components/PostsPreview';
+import ScrollReveal from './components/ScrollReveal';
+import Services from './components/Services';
 
 /**
  * Metadados específicos para a página inicial
@@ -47,7 +47,7 @@ export default function Home() {
       {/* Preview de posts na home */}
       <PostsPreview />
 
-      {/* Footer com estilo consistente */}
+      {/* Footer com rodapé apenas */}
       <Footer />
     </>
   );

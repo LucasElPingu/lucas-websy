@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
-import styles from "./posts.module.css";
+import Header from "../components/Header";
 import { getAllPosts } from "./data";
+import styles from "./posts.module.css";
 
 export const metadata: Metadata = {
   title: "Posts | Lucas Websy",
@@ -76,8 +76,7 @@ export default function PostsPage() {
         </div>
       </section>
 
-      <div className="section-divider" />
-      <Footer showContact={false} />
+      <Footer showContact={false}/>
     </>
   );
 }

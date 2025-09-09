@@ -20,7 +20,7 @@ export const posts: Post[] = [
     excerpt:
       "Credibilidade, funcionamento 24/7, presença no Google, fortalecimento de marca e integração com redes e vendas.",
     date: "2025-01-01T00:00:00.000Z",
-    coverImage: "/images/imagem1.png",
+    coverImage: "/images/5-motivos-site.png",
     tags: ["negócios", "marketing", "site", "2025"],
     blocks: [
       {
@@ -43,7 +43,7 @@ export const posts: Post[] = [
         type: "paragraph",
         text: "5️⃣ Integração com redes sociais e canais de vendas — Seu site pode centralizar canais de venda, integrações com WhatsApp, redes sociais e ferramentas de pagamento, facilitando a jornada do cliente.",
       },
-      { type: "image", src: "/images/imagem1.png", alt: "Exemplo de site profissional" },
+      { type: "image", src: "/images/5-motivos-img2.png", alt: "Exemplo de site profissional" },
       {
         type: "list",
         items: [
@@ -54,6 +54,44 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "como-escolher-melhor-layout",
+    title: "Como Escolher o Melhor Layout Para o Seu Site",
+    excerpt: "Escolher o layout certo é fundamental para a experiência do usuário e conversão. Veja como escolher o layout ideal para seu site em 2025.",
+    date: "2025-02-01T00:00:00.000Z",
+    coverImage: "/images/share.png",
+    tags: ["design", "layout", "responsivo"],
+    blocks: [
+      { type: "paragraph", text: "Escolher o layout certo é fundamental para o sucesso do seu site. Um bom design não é apenas visualmente agradável, mas também facilita a navegação, melhora a experiência do usuário e aumenta suas chances de conversão. Neste post, vamos mostrar como escolher o layout ideal para o seu site em 2025." },
+      { type: "list", items: [
+        "Priorize um Layout Limpo e Organizado — Use espaços em branco, organize o conteúdo em seções claras e evite excesso de elementos.",
+        "Responsividade é Essencial — Certifique-se de que seu layout se adapta perfeitamente a qualquer tamanho de tela.",
+        "Velocidade de Carregamento — Prefira designs que carreguem rápido, otimizando imagens e scripts.",
+        "Coerência com Sua Identidade Visual — Escolha cores, fontes e elementos que reflitam a sua marca.",
+        "Inspiração e Exemplos — Pesquise sites do seu segmento e use referências para criar algo único."
+      ]},
+      { type: "image", src: "/images/imagem1.png", alt: "Comparação de layouts limpos x confusos" }
+    ]
+  },
+  {
+    slug: "erros-comuns-criar-site",
+    title: "Erros Comuns ao Criar um Site e Como Evitá-los",
+    excerpt: "Erros comuns comprometem performance, usabilidade e SEO. Saiba o que evitar ao criar seu site.",
+    date: "2025-03-01T00:00:00.000Z",
+    coverImage: "/images/imagem1.png",
+    tags: ["erros", "boas-praticas", "seo"],
+    blocks: [
+      { type: "paragraph", text: "Criar um site pode parecer simples, mas muitos cometem erros que prejudicam a performance, a usabilidade e até o SEO. Neste post, você vai conhecer os principais erros e como evitá-los." },
+      { type: "list", items: [
+        "Site Lento e Pesado — Otimize imagens, scripts e escolha um layout leve.",
+        "Layout Confuso ou Desorganizado — Um design limpo ajuda o usuário a encontrar o que precisa.",
+        "Falta de Responsividade — Teste em diferentes dispositivos antes de publicar.",
+        "SEO Malfeito — Use títulos, meta descrições, URLs amigáveis e sitemap.xml.",
+        "Conteúdo Difícil de Ler — Evite textos muito longos, fontes pequenas ou cores inadequadas."
+      ]},
+      { type: "image", src: "/images/share.png", alt: "Checklist de boas práticas" }
+    ]
+  }
 ];
 
 export function getPostBySlug(slug: string): Post | undefined {
