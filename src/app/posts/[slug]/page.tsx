@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,14 +7,19 @@ import Header from "../../components/Header";
 import { getAllPosts, getPostBySlug } from "../data";
 import styles from "../post-detail.module.css";
 
+// Geração de rotas estáticas
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+// SEO dinâmico baseado no post
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+
   return {
     title: `${post.title} | Lucas Websy`,
     description: post.excerpt,
@@ -29,7 +34,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function PostDetail({ params }: { params: Promise<{ slug: string }> }) {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default async function PostDetail(
+  { params }: { params: Promise<{ slug: string }> }
+) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return notFound();
@@ -103,7 +115,7 @@ export default async function PostDetail({ params }: { params: Promise<{ slug: s
         </div>
       </section>
 
-      <Footer showContact={false}/>
+      <Footer showContact={false} />
     </>
   );
 }

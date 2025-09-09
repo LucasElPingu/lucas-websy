@@ -2,10 +2,11 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
-import styles from "./Header.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from "react";
+import styles from "./Header.module.css";
 
 /**
  * Componente Header - Navegação principal do site
@@ -48,7 +49,7 @@ export default function Header() {
       <div className={styles.container}>
         {/* Logo principal da marca */}
         <div className={styles.logo}>
-          <a
+          <Link
             href="/"
             className={styles.logoButton}
             onClick={(e) => {
@@ -65,7 +66,7 @@ export default function Header() {
             />
             <span className={styles.logoText}>Lucas</span>
             <span className={styles.logoAccent}>Websy</span>
-          </a>
+          </Link>
         </div>
 
         {/* Navegação para desktop */}

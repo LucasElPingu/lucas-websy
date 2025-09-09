@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -11,15 +11,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-/**
- * Metadados completos para SEO otimizado
- */
 export const metadata: Metadata = {
-  // T��tulo e descrição otimizados
   title: "Lucas Websy - Desenvolvimento de Sites Profissionais | Lucas Silva",
   description: "Desenvolvedor web especializado em criar sites profissionais, e-commerce e landing pages modernas. Sites rápidos, responsivos e otimizados para SEO que geram resultados para seu negócio.",
-  
-  // Keywords estratégicas
   keywords: [
     "desenvolvimento web",
     "criação de sites",
@@ -35,14 +29,7 @@ export const metadata: Metadata = {
     "sites modernos",
     "desenvolvimento frontend"
   ].join(", "),
-  
-  // Informações do autor
-  authors: [{ 
-    name: "Lucas Silva", 
-    url: "https://lucaswebsy.com" 
-  }],
-  
-  // Configurações de robots
+  authors: [{ name: "Lucas Silva", url: "https://lucaswebsy.com" }],
   robots: {
     index: true,
     follow: true,
@@ -54,8 +41,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  
-  // Open Graph para redes sociais
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -72,8 +57,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
     title: "Lucas Websy - Desenvolvimento de Sites Profissionais",
@@ -81,22 +64,18 @@ export const metadata: Metadata = {
     images: ["/images/share.png"],
     creator: "@lucaswebsy",
   },
-  
-  // Configurações adicionais
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
-  
-  // Verificação de propriedade (quando disponível)
   verification: {
     google: "google-site-verification-code",
     yandex: "yandex-verification-code",
   },
-  
-  // Configurações de categoria
   category: "technology",
+};
+
+// ✅ Correto: export separado para viewport
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 /**

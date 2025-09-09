@@ -33,7 +33,7 @@ export const posts: Post[] = [
       },
       {
         type: "paragraph",
-        text: "3️�� Aparece no Google e atrai novos clientes — Com SEO e conteúdo bem trabalhado, seu site pode ser encontrado por quem busca pelos seus serviços. Isso gera tráfego qualificado e novas oportunidades de negócio.",
+        text: "3️⃣ Aparece no Google e atrai novos clientes — Com SEO e conteúdo bem trabalhado, seu site pode ser encontrado por quem busca pelos seus serviços. Isso gera tráfego qualificado e novas oportunidades de negócio.",
       },
       {
         type: "paragraph",
@@ -44,14 +44,6 @@ export const posts: Post[] = [
         text: "5️⃣ Integração com redes sociais e canais de vendas — Seu site pode centralizar canais de venda, integrações com WhatsApp, redes sociais e ferramentas de pagamento, facilitando a jornada do cliente.",
       },
       { type: "image", src: "/images/5-motivos-img2.png", alt: "Exemplo de site profissional" },
-      {
-        type: "list",
-        items: [
-          "Use imagens e ilustrações para tornar o conteúdo mais atrativo.",
-          "Inclua chamadas para ação claras: orçamento, contato ou compra.",
-          "Mantenha o conteúdo atualizado para melhorar SEO e relevância.",
-        ],
-      },
     ],
   },
   {
@@ -59,7 +51,7 @@ export const posts: Post[] = [
     title: "Como Escolher o Melhor Layout Para o Seu Site",
     excerpt: "Escolher o layout certo é fundamental para a experiência do usuário e conversão. Veja como escolher o layout ideal para seu site em 2025.",
     date: "2025-02-01T00:00:00.000Z",
-    coverImage: "/images/share.png",
+    coverImage: "/images/stickman-think.png",
     tags: ["design", "layout", "responsivo"],
     blocks: [
       { type: "paragraph", text: "Escolher o layout certo é fundamental para o sucesso do seu site. Um bom design não é apenas visualmente agradável, mas também facilita a navegação, melhora a experiência do usuário e aumenta suas chances de conversão. Neste post, vamos mostrar como escolher o layout ideal para o seu site em 2025." },
@@ -70,7 +62,7 @@ export const posts: Post[] = [
         "Coerência com Sua Identidade Visual — Escolha cores, fontes e elementos que reflitam a sua marca.",
         "Inspiração e Exemplos — Pesquise sites do seu segmento e use referências para criar algo único."
       ]},
-      { type: "image", src: "/images/imagem1.png", alt: "Comparação de layouts limpos x confusos" }
+      { type: "image", src: "/images/share.png", alt: "Comparação de layouts limpos x confusos" }
     ]
   },
   {
@@ -78,7 +70,7 @@ export const posts: Post[] = [
     title: "Erros Comuns ao Criar um Site e Como Evitá-los",
     excerpt: "Erros comuns comprometem performance, usabilidade e SEO. Saiba o que evitar ao criar seu site.",
     date: "2025-03-01T00:00:00.000Z",
-    coverImage: "/images/imagem1.png",
+    coverImage: "/images/errors-image.png",
     tags: ["erros", "boas-praticas", "seo"],
     blocks: [
       { type: "paragraph", text: "Criar um site pode parecer simples, mas muitos cometem erros que prejudicam a performance, a usabilidade e até o SEO. Neste post, você vai conhecer os principais erros e como evitá-los." },
