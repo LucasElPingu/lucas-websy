@@ -1,17 +1,17 @@
-# robots.txt para Lucas Websy
+# robots.txt — Lucas Websy
+# Host e sitemaps
+Host: https://lucaswebsy.com.br
+Sitemap: https://lucaswebsy.com.br/sitemap.xml
+Sitemap: https://lucaswebsy.com.br/sitemap-0.xml
 
+# Regras gerais para todos os bots
 User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
 Allow: /
 
-# Sitemap
-Sitemap: https://lucaswebsy.com/sitemap.xml
-
-# Arquivos que não devem ser indexados
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
-
-# Crawl-delay para bots mais agressivos
+# Regras específicas / Crawl-delay para bots mais agressivos
 User-agent: Baiduspider
 Crawl-delay: 1
 

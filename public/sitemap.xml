@@ -1,47 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <!-- Página inicial -->
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Home -->
   <url>
-    <loc>https://lucaswebsy.com/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <priority>1.0</priority>
+    <loc>https://lucaswebsy.com.br/</loc>
+    <lastmod>2025-07-10T16:22:51.807Z</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
-  
-  <!-- Seção de Serviços -->
+
+  <!-- Anchors / Sections -->
   <url>
-    <loc>https://lucaswebsy.com/#services</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <loc>https://lucaswebsy.com.br/#services</loc>
+    <lastmod>2025-07-10T16:22:51.807Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
   </url>
-  
-  <!-- Seção de Benefícios -->
+
   <url>
-    <loc>https://lucaswebsy.com/#benefits</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <loc>https://lucaswebsy.com.br/#benefits</loc>
+    <lastmod>2025-07-10T16:22:51.807Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
   </url>
-  
-  <!-- Seção Sobre -->
+
   <url>
-    <loc>https://lucaswebsy.com/#about</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <loc>https://lucaswebsy.com.br/#about</loc>
+    <lastmod>2025-07-10T16:22:51.807Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
   </url>
-  
-  <!-- Seção de Contato -->
+
   <url>
-    <loc>https://lucaswebsy.com/#contact</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
+    <loc>https://lucaswebsy.com.br/#contact</loc>
+    <lastmod>2025-07-10T16:22:51.807Z</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-  
+
+  <!-- Posts index -->
+  <url>
+    <loc>https://lucaswebsy.com.br/posts</loc>
+    <lastmod>2025-03-01T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual posts -->
+  <url>
+    <loc>https://lucaswebsy.com.br/posts/erros-comuns-criar-site</loc>
+    <lastmod>2025-03-01T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://lucaswebsy.com.br/images/share.png</image:loc>
+      <image:caption>Checklist de boas práticas</image:caption>
+      <image:title>Erros Comuns ao Criar um Site</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://lucaswebsy.com.br/posts/como-escolher-melhor-layout</loc>
+    <lastmod>2025-02-01T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://lucaswebsy.com.br/images/stickman-think.png</image:loc>
+      <image:caption>Comparação de layouts limpos x confusos</image:caption>
+      <image:title>Como Escolher o Melhor Layout</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://lucaswebsy.com.br/posts/5-motivos-para-ter-um-site-em-2025</loc>
+    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://lucaswebsy.com.br/images/5-motivos-img2.png</image:loc>
+      <image:caption>Exemplo de site profissional</image:caption>
+      <image:title>5 motivos para ter um site em 2025</image:title>
+    </image:image>
+  </url>
+
 </urlset>
