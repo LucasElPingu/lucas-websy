@@ -30,6 +30,15 @@ export async function generateMetadata(
       description: post.excerpt,
       url: `https://lucaswebsy.com.br/posts/${post.slug}`,
       images: [{ url: post.coverImage, width: 1200, height: 630 }],
+      publishedTime: post.date,
+      authors: ["Lucas Silva"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage],
+      creator: "@lucaswebsy",
     },
   };
 }
@@ -49,6 +58,39 @@ export default async function PostDetail(
   return (
     <>
       <Header />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lucaswebsy.com.br/" },
+              { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://lucaswebsy.com.br/posts" },
+              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://lucaswebsy.com.br/posts/${post.slug}` }
+            ]
+          })
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "description": post.excerpt,
+            "image": [`https://lucaswebsy.com.br${post.coverImage}`],
+            "datePublished": post.date,
+            "dateModified": post.date,
+            "author": { "@type": "Person", "name": "Lucas Silva" },
+            "publisher": { "@type": "Organization", "name": "Lucas Websy", "logo": { "@type": "ImageObject", "url": "https://lucaswebsy.com.br/images/icon.png" } },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://lucaswebsy.com.br/posts/${post.slug}` }
+          })
+        }}
+      />
 
       <section className={`section ${styles.postSection}`}>
         <div className="container">

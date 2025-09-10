@@ -12,7 +12,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lucas Websy - Desenvolvimento de Sites Profissionais | Lucas Silva",
+  metadataBase: new URL("https://lucaswebsy.com.br"),
+  title: {
+    default: "Lucas Websy - Desenvolvimento de Sites Profissionais | Lucas Silva",
+    template: "%s | Lucas Websy",
+  },
   description: "Desenvolvedor web especializado em criar sites profissionais, e-commerce e landing pages modernas. Sites rápidos, responsivos e otimizados para SEO que geram resultados para seu negócio.",
   keywords: [
     "desenvolvimento web",
@@ -29,7 +33,7 @@ export const metadata: Metadata = {
     "sites modernos",
     "desenvolvimento frontend"
   ].join(", "),
-  authors: [{ name: "Lucas Silva", url: "https://lucaswebsy.com" }],
+  authors: [{ name: "Lucas Silva", url: "https://lucaswebsy.com.br" }],
   robots: {
     index: true,
     follow: true,
@@ -41,10 +45,17 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: "/",
+    languages: {
+      "pt-BR": "https://lucaswebsy.com.br/",
+      "x-default": "https://lucaswebsy.com.br/",
+    },
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://lucaswebsy.com",
+    url: "https://lucaswebsy.com.br/",
     siteName: "Lucas Websy",
     title: "Lucas Websy - Desenvolvimento de Sites Profissionais",
     description: "Sites rápidos, modernos e personalizados que geram resultados para seu negócio. Especialista em e-commerce e landing pages.",
@@ -59,14 +70,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@lucaswebsy",
+    creator: "@lucaswebsy",
     title: "Lucas Websy - Desenvolvimento de Sites Profissionais",
     description: "Sites rápidos, modernos e personalizados que geram resultados para seu negócio.",
     images: ["/images/share.png"],
-    creator: "@lucaswebsy",
-  },
-  verification: {
-    google: "google-site-verification-code",
-    yandex: "yandex-verification-code",
   },
   category: "technology",
 };
@@ -111,8 +119,8 @@ export default function RootLayout({
               "name": "Lucas Silva",
               "alternateName": "Lucas Websy",
               "description": "Desenvolvedor web especializado em sites profissionais e e-commerce",
-              "url": "https://lucaswebsy.com",
-              "image": "https://lucaswebsy.com/images/imagem1.png",
+              "url": "https://lucaswebsy.com.br",
+              "image": "https://lucaswebsy.com.br/images/share.png",
               "sameAs": [
                 "https://www.linkedin.com/in/lucas-silva-569ba430b",
                 "https://wa.me/5583993324678"

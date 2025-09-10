@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Lucas Websy - Desenvolvimento de Sites Profissionais | Início",
   description: "Transforme sua presença digital com sites profissionais, modernos e otimizados. Lucas Websy cria soluções web que geram resultados para seu negócio.",
   alternates: {
-    canonical: "https://lucaswebsy.com",
+    canonical: "https://lucaswebsy.com.br",
   },
 };
 

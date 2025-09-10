@@ -28,6 +28,20 @@ export default function PostsPage() {
     <>
       <Header />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Blog Lucas Websy",
+            "url": "https://lucaswebsy.com.br/posts",
+            "inLanguage": "pt-BR",
+            "publisher": { "@type": "Organization", "name": "Lucas Websy" }
+          })
+        }}
+      />
+
       <section id="posts" className={`section ${styles.blogSection}`}>
         <div className="container">
           <header className={styles.blogHeader}>
