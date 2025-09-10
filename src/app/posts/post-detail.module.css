@@ -1,5 +1,6 @@
 .postSection {
   padding: 8rem 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #6a11cb);
 }
 
 .postHeader {
@@ -66,7 +67,7 @@
   aspect-ratio: 4/3;
   border-radius: 8px;
   overflow: hidden;
-  margin: 1rem 0;
+  margin: 3rem 0;
   border: 1px solid var(--border-light);
   max-height: 100%;
 }

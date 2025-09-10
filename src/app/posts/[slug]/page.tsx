@@ -7,6 +7,11 @@ import Header from "../../components/Header";
 import { getAllPosts, getPostBySlug } from "../data";
 import styles from "../post-detail.module.css";
 
+// Novo import para suportar Markdown nos blocos
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
+
 // Geração de rotas estáticas
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -59,6 +64,7 @@ export default async function PostDetail(
     <>
       <Header />
 
+      {/* Schema.org Breadcrumb */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -74,6 +80,7 @@ export default async function PostDetail(
         }}
       />
 
+      {/* Schema.org BlogPosting */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -127,17 +134,35 @@ export default async function PostDetail(
           <article className={styles.postContent}>
             {post.blocks.map((block, i) => {
               if (block.type === "paragraph") {
-                return <p key={i}>{block.text}</p>;
+                return (
+                  <div key={i} className={styles.contentParagraph}>
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                      rehypePlugins={[rehypeRaw]}
+                    >
+                      {block.text}
+                    </ReactMarkdown>
+                  </div>
+                );
               }
+
               if (block.type === "list") {
                 return (
                   <ul key={i} className={styles.contentList}>
                     {block.items.map((item, idx) => (
-                      <li key={idx}>{item}</li>
+                      <li key={idx}>
+                        <ReactMarkdown
+                          remarkPlugins={[remarkGfm]}
+                          rehypePlugins={[rehypeRaw]}
+                        >
+                          {item}
+                        </ReactMarkdown>
+                      </li>
                     ))}
                   </ul>
                 );
               }
+
               if (block.type === "image") {
                 return (
                   <div key={i} className={styles.contentImage}>
@@ -151,6 +176,7 @@ export default async function PostDetail(
                   </div>
                 );
               }
+
               return null;
             })}
           </article>

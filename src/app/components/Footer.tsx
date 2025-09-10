@@ -179,10 +179,9 @@ export default function Footer({ showContact = true }: { showContact?: boolean }
               {/* Footer bottom */}
               <div className={styles.footerBottom}>
                 <div className={styles.divider}></div>
-
                 <div className={styles.bottomContent}>
                   <div className={styles.copyright}>
-                    <p>&copy; {currentYear} Lucas Websy. Todos os direitos reservados.</p>
+                    <p>&copy; {currentYear} Lucas Websy. Todos os direitos reservados</p>
                   </div>
 
                   <div className={styles.credits}>
