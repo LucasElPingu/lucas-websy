@@ -502,3 +502,39 @@ a:hover {
   background: var(--accent-color);
   color: var(--bg-primary);
 }
+
+/* Mobile / touch friendly enhancements */
+img, picture, video, .coverMedia, .contentMedia {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, a, .btn, .navLink, .mobileNavLink {
+  -webkit-tap-highlight-color: rgba(0,0,0,0.05);
+  touch-action: manipulation;
+}
+
+/* Ensure minimum touch target size */
+.btn, .mobileNavLink, .navLink, .logoButton {
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+}
+
+/* Reduce motion for users who request it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Improve text legibility on small screens */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  h1 { font-size: clamp(2.4rem, 8vw, 5rem); }
+  h2 { font-size: clamp(1.6rem, 6vw, 3.5rem); }
+}

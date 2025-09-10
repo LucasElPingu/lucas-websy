@@ -105,10 +105,14 @@ export default function RootLayout({
         <link rel="manifest" href="/images/site.webmanifest" />
         
         {/* Meta tags adicionais para SEO */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1F1D1D" />
         <meta name="msapplication-TileColor" content="#1F1D1D" />
         <meta name="format-detection" content="telephone=no" />
-        
+        <link rel="canonical" href="https://lucaswebsy.com.br/" />
+        <link rel="alternate" hrefLang="pt-BR" href="https://lucaswebsy.com.br/" />
+        <link rel="alternate" hrefLang="x-default" href="https://lucaswebsy.com.br/" />
+
         {/* JSON-LD Schema para dados estruturados */}
         <script
           type="application/ld+json"
