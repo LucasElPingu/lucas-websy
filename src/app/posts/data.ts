@@ -1,7 +1,13 @@
 export type PostBlock =
   | { type: "paragraph"; text: string }
   | { type: "list"; items: string[] }
-  | { type: "image"; src: string; alt: string; width?: number; height?: number };
+  | {
+      type: "image";
+      src: string;
+      alt: string;
+      width?: number;
+      height?: number;
+    };
 
 export type Post = {
   slug: string;
@@ -43,7 +49,11 @@ export const posts: Post[] = [
         type: "paragraph",
         text: "5️⃣ **Integração com redes sociais e canais de vendas** — Seu site pode centralizar WhatsApp, Instagram, checkout online e até chatbots. Isso facilita o caminho do cliente e aumenta as chances de conversão.",
       },
-      { type: "image", src: "/images/5-motivos-img2.png", alt: "Exemplo de site profissional em 2025" },
+      {
+        type: "image",
+        src: "/images/5-motivos-img2.png",
+        alt: "Exemplo de site profissional em 2025",
+      },
     ],
   },
   {
@@ -69,7 +79,11 @@ export const posts: Post[] = [
           "💡 **Busque Inspiração** — Analise sites do seu segmento, veja boas práticas e crie algo único, adaptado ao seu público.",
         ],
       },
-      { type: "image", src: "/images/share.png", alt: "Exemplo comparativo de layouts limpos x confusos" },
+      {
+        type: "image",
+        src: "/images/share.png",
+        alt: "Exemplo comparativo de layouts limpos x confusos",
+      },
     ],
   },
   {
@@ -95,7 +109,49 @@ export const posts: Post[] = [
           "📖 **Conteúdo Difícil de Ler** — Prefira textos objetivos, fontes legíveis e contraste adequado de cores.",
         ],
       },
-      { type: "image", src: "/images/share.png", alt: "Checklist de boas práticas para sites" },
+      {
+        type: "image",
+        src: "/images/share.png",
+        alt: "Checklist de boas práticas para sites",
+      },
+    ],
+  },
+  {
+    slug: "negocio-perde-clientes-sem-site",
+    title: "Por que seu negócio perde clientes sem um site profissional",
+    excerpt:
+      "Descubra os principais motivos pelos quais empresas que não possuem um site profissional acabam perdendo clientes e oportunidades todos os dias.",
+    date: "2025-03-05T00:00:00.000Z",
+    coverImage: "/images/post4-image.png",
+    tags: ["sites", "credibilidade", "vendas", "seo"],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "Muitos empreendedores acreditam que apenas ter um perfil no Instagram ou no Facebook já é suficiente para atrair clientes. Mas a verdade é que **sem um site profissional seu negócio perde credibilidade, vendas e visibilidade online**. Em 2025, depender apenas de redes sociais é um risco que pode custar caro.",
+      },
+      {
+        type: "list",
+        items: [
+          "🔍 **Você não aparece no Google** — A maioria das pessoas pesquisa no Google antes de comprar. Se sua empresa não tem site, ela simplesmente não existe para esses clientes.",
+          "❌ **Falta de credibilidade** — Negócios sem site passam a impressão de serem menos profissionais. Um site bem estruturado transmite confiança imediata.",
+          "⌛ **Perda de oportunidades 24/7** — Enquanto você dorme, um site pode estar vendendo ou captando clientes. Sem ele, suas oportunidades ficam limitadas ao horário de atendimento.",
+          "📱 **Dificuldade de comunicação** — Um site reúne todas as informações em um só lugar: serviços, contatos, localização e até integrações com WhatsApp e redes sociais.",
+          "📉 **Concorrência na frente** — Seus concorrentes que já têm site, eles aparecem antes de você e capturam os clientes que poderiam ser seus.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Em resumo: sem um site profissional, seu negócio fica invisível para milhares de clientes em potencial. Redes sociais ajudam, mas **o site é a base da sua presença digital**.",
+      },
+      {
+        type: "image",
+        src: "/images/share.png",
+        alt: "Site profissional atrai mais clientes",
+      },
+      {
+        type: "paragraph",
+        text: "⚡ Quer evitar perder clientes para a concorrência? Invista em um site rápido, moderno e otimizado para o Google. Seu negócio merece mais visibilidade e credibilidade!",
+      },
     ],
   },
 ];

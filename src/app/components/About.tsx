@@ -1,8 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import styles from './About.module.css';
-import Image from 'next/image';
 
 /**
  * Componente About - Seção sobre o desenvolvedor
@@ -177,7 +177,7 @@ export default function About() {
                 }}
               >
                 <Image 
-                  src="/images/imagem1.png" 
+                  src="/images/image1.png" 
                   alt="Lucas Silva - Desenvolvedor Web"
                   width={600}
                   height={600}

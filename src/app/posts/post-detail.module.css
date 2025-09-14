@@ -30,7 +30,8 @@
 
 .coverFrame {
   position: relative;
-  width: 1024px;
+  width: 100%;
+  max-width: 1024px;   /* limite no desktop */
   margin: 0 auto 1.5rem;
   aspect-ratio: 4/3;
   background: var(--bg-accent);
@@ -81,9 +82,21 @@
   color: var(--text-secondary);
 }
 
-.contentList li { margin: .5rem 0; }
+.contentList li {
+  margin: .5rem 0;
+}
 
 @media (max-width: 768px) {
-  .postSection { padding: 4rem 0; }
-  .postContent { padding: 1.25rem; }
+  .postSection {
+    padding: 4rem 0;
+  }
+
+  .postContent {
+    padding: 1.25rem;
+  }
+
+  .coverFrame {
+    aspect-ratio: 16/9;   /* mais natural em telas pequenas */
+    max-height: 300px;
+  }
 }
