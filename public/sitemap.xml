@@ -42,7 +42,7 @@
   <!-- Posts index -->
   <url>
     <loc>https://lucaswebsy.com.br/posts</loc>
-    <lastmod>2025-09-14T00:00:00.000Z</lastmod>
+    <lastmod>2025-09-10T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -50,7 +50,7 @@
   <!-- Individual posts -->
   <url>
     <loc>https://lucaswebsy.com.br/posts/erros-comuns-criar-site</loc>
-    <lastmod>2025-03-01T00:00:00.000Z</lastmod>
+    <lastmod>2025-09-10T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -62,7 +62,7 @@
 
   <url>
     <loc>https://lucaswebsy.com.br/posts/como-escolher-melhor-layout</loc>
-    <lastmod>2025-02-01T00:00:00.000Z</lastmod>
+    <lastmod>2025-09-10T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -74,7 +74,7 @@
 
   <url>
     <loc>https://lucaswebsy.com.br/posts/5-motivos-para-ter-um-site-em-2025</loc>
-    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
+    <lastmod>2025-09-10T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -87,7 +87,7 @@
   <!-- Novos posts -->
   <url>
     <loc>https://lucaswebsy.com.br/posts/redes-sociais-vs-site-profissional</loc>
-    <lastmod>2025-09-14T00:00:00.000Z</lastmod>
+    <lastmod>2025-09-17T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -99,7 +99,7 @@
 
   <url>
     <loc>https://lucaswebsy.com.br/posts/uso-consciente-inteligencia-artificial</loc>
-    <lastmod>2025-09-14T00:00:00.000Z</lastmod>
+    <lastmod>2025-09-17T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
