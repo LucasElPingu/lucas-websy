@@ -44,7 +44,8 @@ export default function Footer({ showContact = true }: { showContact?: boolean }
     { id: 'home', label: 'Home', number: '01' },
     { id: 'services', label: 'Serviços', number: '02' },
     { id: 'benefits', label: 'Benefícios', number: '03' },
-    { id: 'about', label: 'Sobre', number: '04' }
+    { id: 'about', label: 'Sobre', number: '04' },
+    { id: 'posts', label: 'posts', number: '05' }
   ];
 
   return (
